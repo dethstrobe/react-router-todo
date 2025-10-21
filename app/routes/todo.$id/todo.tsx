@@ -9,8 +9,8 @@ export interface TodoCardProps {
 
 export async function action({ request }: Route.ActionArgs) {
   if (request.method === "POST") {
-    let data = await request.formData()
-    let body = JSON.stringify({
+    const data = await request.formData()
+    const body = JSON.stringify({
       key: data.get("title"),
       value: { done: data.get("done") === "true" },
     })

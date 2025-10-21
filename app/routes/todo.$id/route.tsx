@@ -22,9 +22,5 @@ export default ({ loaderData }: Route.ComponentProps) => {
     )
   }
 
-  return (
-    <>
-      <TodoCard {...loaderData} />
-    </>
-  )
+  return <TodoCard {...loaderData} />
 }
