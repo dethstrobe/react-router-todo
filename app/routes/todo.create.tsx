@@ -22,11 +22,14 @@ export async function action({ request }: Route.ActionArgs) {
 export default () => {
   return (
     <section>
-      <h2 className="text-l font-semibold">Add a todo</h2>
+      <h2 id="form-title" className="text-l font-semibold">
+        Add a todo
+      </h2>
       <Form
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
         method="post"
         action="/todo/create"
+        aria-labelledby="form-title"
       >
         <label
           className="block text-gray-700 text-sm font-bold mb-2"

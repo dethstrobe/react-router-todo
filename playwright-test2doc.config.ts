@@ -1,4 +1,5 @@
 import { defineConfig, devices } from "@playwright/test"
+import "@test2doc/playwright/types"
 
 /**
  * Read environment variables from file.
@@ -30,6 +31,9 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
+    test2doc: {
+      annotationDefaults: { showArrow: true },
+    },
   },
 
   /* Configure projects for major browsers */

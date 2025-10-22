@@ -37,8 +37,13 @@ export const TodoCard = ({
 }: TodoCardProps) => {
   const fetcher = useFetcher()
   return (
-    <article className="w-full rounded overflow-hidden shadow-lg p-4 bg-white dark:bg-gray-800">
-      <h1 className="text-xl font-semibold">{title}</h1>
+    <article
+      aria-labelledby="todo-title"
+      className="w-full rounded overflow-hidden shadow-lg p-4 bg-white dark:bg-gray-800"
+    >
+      <h1 id="todo-title" className="text-xl font-semibold">
+        {title}
+      </h1>
       <p className="my-4">{description}</p>
       <footer className="flex justify-between">
         <fetcher.Form
